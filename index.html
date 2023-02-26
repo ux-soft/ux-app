@@ -10,5 +10,23 @@
 </head>
 <body>
     <h1>UX APP v.1.0.0</h1>
+    <script type="application/javascript">
+        debugger;
+        if (navigator.geolocation) {
+            alert('GEO!!!!');
+
+            let coo;
+
+            navigator.geolocation.getCurrentPosition((coord) => {
+                debugger;
+                coo = coord;
+            }, (err) => {
+                debugger;
+            });
+
+            alert('END GEO!!!!');
+
+        }
+    </script>
 </body>
 </html>

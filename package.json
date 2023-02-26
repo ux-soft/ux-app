@@ -1,0 +1,22 @@
+{
+  "name": "ux-app",
+  "version": "1.0.0",
+  "description": "UX SOFT APP Monorepo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ux-soft/ux-app.git"
+  },
+  "keywords": [
+    "ux"
+  ],
+  "author": "Paulo Salazar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ux-soft/ux-app/issues"
+  },
+  "homepage": "https://github.com/ux-soft/ux-app#readme"
+}

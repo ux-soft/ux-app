@@ -23,7 +23,6 @@ self.addEventListener('install', event => {
 
 });
 
-
 // Cuando el SW toma el control de la aplicación
 self.addEventListener('activate', event => {
 
@@ -59,7 +58,6 @@ self.addEventListener('sync', event => {
     console.log(event.tag);
 
 });
-
 
 // PUSH: Manejar las push notifications
 self.addEventListener('push', event => {
