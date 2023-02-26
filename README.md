@@ -1,2 +1,2 @@
-# ux-soft-app
+# ux-app
 UX SOFT APP Monorepo
