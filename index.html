@@ -6,26 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>UX APP</title>
     <link rel="stylesheet" href="styles/reset.css">
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
 
 </head>
 <body>
     <h1>UX APP v.1.0.0</h1>
+    <div id="editorjs" style="border: aqua solid 1px; width: available; height: 200px;"></div>
     <script type="application/javascript">
         debugger;
-        if (navigator.geolocation) {
-            alert('GEO!!!!');
 
-            let coo;
+        const editor = new EditorJS({
+            /**
+             * Id of Element that should contain the Editor
+             */
+            holderId : 'editorjs',
 
-            navigator.geolocation.getCurrentPosition((coord) => {
-                debugger;
-                coo = coord;
-            }, (err) => {
-                debugger;
-            });
+            /**
+             * Available Tools list.
+             * Pass Tool's class or Settings object for each Tool you want to use
+             */
+            tools: {
+                header: {
+                    // class: Header,
+                    inlineToolbar : true
+                },
+                // ...
+            },
 
-            alert('END GEO!!!!');
-        }
+            /**
+             * Previously saved data that should be rendered
+             */
+            data: {}
+        });
+
     </script>
 </body>
 </html>
