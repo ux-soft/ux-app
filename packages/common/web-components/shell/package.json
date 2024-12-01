@@ -1,0 +1,19 @@
+{
+  "name": "@traze-web-components/shell",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "author": "Paulo Salazar",
+  "license": "",
+  "description": "",
+  "scripts": {
+    "build": "tsc"
+  }
+}

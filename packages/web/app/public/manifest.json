@@ -1,0 +1,16 @@
+{
+  "name": "TRAZE OS",
+  "short_name": "TZ-OS",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "description": "Traze Web Operation System",
+  "icons": [
+    {
+      "src": "assets/img/logo-traze.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
