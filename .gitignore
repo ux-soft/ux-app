@@ -1,10 +1,10 @@
-# Ignorar todas las carpetas node_modules en cualquier lugar
+# Ignore all node_modules folders in any directory
 **/node_modules/
 
-# Ignorar archivos temporales del sistema
+# Ignore system temporary files
 .DS_Store
 Thumbs.db
 
-# Ignorar archivos de configuración local
+# Ignore local environment and configuration files
 .env
 *.local
