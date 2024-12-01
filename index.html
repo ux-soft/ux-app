@@ -1,52 +1,274 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>UX OS</title>
-    <link rel="stylesheet" href="styles/reset.css">
-<!--    <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>-->
-
+    <title>Theme Switcher - Vanilla JS</title>
     <style>
-        /* Reset básico y fuente sans-serif predeterminada */
+        /* Definición de variables de tema */
+        :root {
+            color-scheme: light dark;
+
+            /* Tema Claro */
+            --color-bg-primary: #ffffff;
+            --color-text-primary: #1a202c;
+            --color-bg-secondary: #f7fafc;
+            --color-border: #e2e8f0;
+            --color-accent: #3182ce;
+            --color-accent-hover: #2c5282;
+
+            /* Tema Oscuro */
+            --color-bg-primary-dark: #1a202c;
+            --color-text-primary-dark: #ffffff;
+            --color-bg-secondary-dark: #2d3748;
+            --color-border-dark: #4a5568;
+            --color-accent-dark: #4299e1;
+            --color-accent-hover-dark: #3182ce;
+        }
+
+        /* Reset y estilos base */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            transition:
+                    background-color 0.3s ease,
+                    color 0.3s ease,
+                    border-color 0.3s ease;
         }
 
-        html, body {
-            height: 100%;
-            font-family: 'Arial', sans-serif; /* Usa una fuente sans-serif */
-            line-height: 1.5; /* Mejora la legibilidad */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            background-color: var(--color-bg-primary);
+            color: var(--color-text-primary);
         }
 
-        img, picture, video, canvas, svg {
-            display: block;
-            max-width: 100%; /* Hace que las imágenes sean responsive */
+        /* Tema Claro (predeterminado) */
+        body {
+            background-color: var(--color-bg-primary);
+            color: var(--color-text-primary);
         }
 
-        input, button, textarea, select {
-            font: inherit; /* Asegura que los formularios hereden la fuente */
+        /* Tema Oscuro */
+        body.dark-theme {
+            background-color: var(--color-bg-primary-dark);
+            color: var(--color-text-primary-dark);
         }
 
-        a {
-            text-decoration: none;
-            color: inherit; /* Evita estilos predeterminados en enlaces */
+        /* Contenedor principal */
+        .theme-container {
+            width: 100%;
+            max-width: 400px;
+            background-color: var(--color-bg-secondary);
+            border: 1px solid var(--color-border);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        ul, ol {
-            list-style: none; /* Elimina el estilo de las listas */
+        .dark-theme .theme-container {
+            background-color: var(--color-bg-secondary-dark);
+            border-color: var(--color-border-dark);
+        }
+
+        /* Encabezado y selector de tema */
+        .theme-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .theme-toggle {
+            position: relative;
+            width: 60px;
+            height: 32px;
+            background-color: #e0e0e0;
+            border-radius: 16px;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .dark-theme .theme-toggle {
+            background-color: #4a5568;
+        }
+
+        .theme-toggle-slider {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .dark-theme .theme-toggle-slider {
+            transform: translateX(28px);
+            background-color: #2d3748;
+        }
+
+        /* Formulario y controles */
+        .form-control {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--color-border);
+            border-radius: 0.375rem;
+            background-color: var(--color-bg-primary);
+            color: var(--color-text-primary);
+        }
+
+        .dark-theme .form-control {
+            border-color: var(--color-border-dark);
+            background-color: var(--color-bg-primary-dark);
+            color: var(--color-text-primary-dark);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: var(--color-accent);
+            color: white;
+            border: none;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--color-accent-hover);
+        }
+
+        .dark-theme .btn {
+            background-color: var(--color-accent-dark);
+        }
+
+        .dark-theme .btn:hover {
+            background-color: var(--color-accent-hover-dark);
+        }
+
+        /* Información de tema */
+        .theme-info {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 0.875rem;
+            color: var(--color-text-primary);
+        }
+
+        .dark-theme .theme-info {
+            color: var(--color-text-primary-dark);
         }
     </style>
 </head>
 <body>
-    <h1>UX OS v.1.0.0</h1>
-    <h1>TEST</h1>
+<div class="theme-container">
+    <div class="theme-header">
+        <h1>UX OS</h1>
+        <div id="themeToggle" class="theme-toggle">
+            <div class="theme-toggle-slider"></div>
+        </div>
+    </div>
 
-    <script type="application/javascript">
-        debugger;
-    </script>
+    <div class="theme-form">
+        <input
+                type="text"
+                placeholder="Nombre"
+                class="form-control"
+        >
+        <button class="btn">
+            Enviar
+        </button>
+    </div>
+
+    <div class="theme-info">
+        <p id="themeDescription">Tema actual: Claro</p>
+        <p>Cambia entre temas usando el botón o la configuración de tu sistema</p>
+    </div>
+</div>
+
+<script>
+    // Clase para manejar el cambio de tema
+    class ThemeSwitcher {
+        constructor() {
+            // Elementos del DOM
+            this.body = document.body;
+            this.themeToggle = document.getElementById('themeToggle');
+            this.themeDescription = document.getElementById('themeDescription');
+
+            // Preferencia del sistema de tema
+            this.prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+
+            // Inicializar eventos
+            this.initEventListeners();
+
+            // Establecer tema inicial
+            this.setInitialTheme();
+        }
+
+        // Inicializar escuchas de eventos
+        initEventListeners() {
+            // Evento de clic para cambiar tema manualmente
+            this.themeToggle.addEventListener('click', () => this.toggleTheme());
+
+            // Escuchar cambios en la preferencia del sistema
+            this.prefersDarkMode.addEventListener('change', (e) => this.handleSystemThemeChange(e));
+        }
+
+        // Establecer tema inicial
+        setInitialTheme() {
+            // Verificar tema guardado en localStorage
+            const savedTheme = localStorage.getItem('theme');
+
+            if (savedTheme) {
+                // Usar tema guardado
+                this.setTheme(savedTheme);
+            } else {
+                // Usar preferencia del sistema
+                this.setTheme(
+                    this.prefersDarkMode.matches ? 'dark' : 'light'
+                );
+            }
+        }
+
+        // Manejar cambios en el tema del sistema
+        handleSystemThemeChange(e) {
+            // Solo cambiar si no hay tema guardado
+            if (!localStorage.getItem('theme')) {
+                this.setTheme(e.matches ? 'dark' : 'light');
+            }
+        }
+
+        // Cambiar entre temas
+        toggleTheme() {
+            const currentTheme = this.body.classList.contains('dark-theme') ? 'light' : 'dark';
+            this.setTheme(currentTheme);
+        }
+
+        // Establecer tema específico
+        setTheme(theme) {
+            // Aplicar/remover clase de tema oscuro
+            this.body.classList.toggle('dark-theme', theme === 'dark');
+
+            // Actualizar localStorage
+            localStorage.setItem('theme', theme);
+
+            // Actualizar descripción de tema
+            this.themeDescription.textContent = `Tema actual: ${theme === 'dark' ? 'Oscuro' : 'Claro'}`;
+        }
+    }
+
+    // Inicializar Theme Switcher cuando el DOM esté listo
+    document.addEventListener('DOMContentLoaded', () => {
+        new ThemeSwitcher();
+    });
+</script>
 </body>
 </html>
