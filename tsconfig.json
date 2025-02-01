@@ -7,7 +7,7 @@
     "strict": true,                           // Habilita todas las comprobaciones de tipo estricto
     "esModuleInterop": true,                  // Permite interoperabilidad entre módulos
     "skipLibCheck": true,                     // Omite la verificación de archivos de definición
-    "forceConsistentCasingInFileNames": true,// Asegura consistencia en nombres de archivo
+    "forceConsistentCasingInFileNames": true, // Asegura consistencia en nombres de archivo
 
 //    "outDir": "./dist",                       // Directorio de salida para archivos compilados
 //    "rootDir": "./",                          // Directorio raíz del código fuente
@@ -24,7 +24,7 @@
 
   },
   "include": [
-    "packages/common/components/shell/src/*"
+//    "packages/common/components/shell/src/*"
   ],
   "exclude": [
     "node_modules",
