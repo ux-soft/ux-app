@@ -1,19 +1,23 @@
 {
-  "name": "traze-app-monorepo",
+  "private": true,
+  "name": "ux-soft-monorepo",
   "version": "1.0.0",
   "main": "",
   "repository": "git@github.com:trazesoft/traze-services-app.git",
   "author": "Paulo Salazar <paulo.salazar@me.com>",
   "license": "",
-  "private": true,
+
   "workspaces": [
-    "packages/*/*/*"
+    "packages/*/*/*",
+    "packages/*/*/*/*"
   ],
+
   "scripts": {
     "build": "tsc",
     "build:for": "yarn workspaces foreach -p run build",
     "build:all": "concurrently \"yarn workspace common build\""
   },
+
   "devDependencies": {
     "@types/eslint": "^9.6.1",
     "@types/node": "^22.7.4",
@@ -23,5 +27,6 @@
     "typescript": "^5.6.2",
     "vite": "^5.4.8"
   },
+
   "packageManager": "yarn@4.5.0"
 }
