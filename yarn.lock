@@ -2101,20 +2101,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"traze-app-monorepo@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "traze-app-monorepo@workspace:."
-  dependencies:
-    "@types/eslint": "npm:^9.6.1"
-    "@types/node": "npm:^22.7.4"
-    concurrently: "npm:^9.0.1"
-    eslint: "npm:^9.11.1"
-    ts-node: "npm:^10.9.2"
-    typescript: "npm:^5.6.2"
-    vite: "npm:^5.4.8"
-  languageName: unknown
-  linkType: soft
-
 "tree-kill@npm:^1.2.2":
   version: 1.2.2
   resolution: "tree-kill@npm:1.2.2"
@@ -2231,6 +2217,20 @@ __metadata:
   checksum: 10c0/4ef57b45aa820d7ac6496e9208559986c665e49447cb072744c13b66925a362d96dd5a46c4530a6b8e203e5db5fe849369444440cb22ecfc26c679359e5dfa3c
   languageName: node
   linkType: hard
+
+"ux-soft-monorepo@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "ux-soft-monorepo@workspace:."
+  dependencies:
+    "@types/eslint": "npm:^9.6.1"
+    "@types/node": "npm:^22.7.4"
+    concurrently: "npm:^9.0.1"
+    eslint: "npm:^9.11.1"
+    ts-node: "npm:^10.9.2"
+    typescript: "npm:^5.6.2"
+    vite: "npm:^5.4.8"
+  languageName: unknown
+  linkType: soft
 
 "v8-compile-cache-lib@npm:^3.0.1":
   version: 3.0.1
