@@ -23,14 +23,16 @@
     "removeComments": false,
     "noImplicitAny": true,
 
-    "outDir": "./dist",
-    "rootDir": "./",
-
     "baseUrl": "./",
     "paths": {
-      "@ui/*": ["packages/ui/src/*"],
-      "@core/*": ["packages/core/src/*"],
-      "@backend/*": ["packages/backend/src/*"]
-    }
+      "@packages/*": [
+        "packages/*/src",
+        "packages/*/*/src",
+        "packages/*/*/*/src",
+        "packages/*/*/*/*/src"
+      ]
+    },
+    "include": ["packages/**/*"],
+    "exclude": ["node_modules", "dist"]
   }
 }
