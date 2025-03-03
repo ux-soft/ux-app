@@ -1,0 +1,5 @@
+ID      STATUS      DESCRIPTION
+________________________________________________________________
+01      Done        Config root: tsconfig.json
+02      Pending     Config root: package.json
+03      Pending     Config root: vite.config.ts
