@@ -34,5 +34,5 @@ export class UxsBaseWebComponent extends HTMLElement {
     }
 }
 
-// Registrar el componente base para que se pueda extender
+// Register component
 customElements.define("uxs-base-web-component", UxsBaseWebComponent);

@@ -1,10 +1,37 @@
-# Ignore all node_modules folders in any directory
+# ⬇️ Node.js dependencies
 **/node_modules/
+**/dist/
+**/out/
 
-# Ignore system temporary files
+# ⬇️ Archivos de configuración local y entorno
+.env
+*.local
+
+# ⬇️ Archivos temporales del sistema
 .DS_Store
 Thumbs.db
 
-# Ignore local environment and configuration files
-.env
-*.local
+# ⬇️ Archivos de compilación de TypeScript
+**/*.tsbuildinfo
+
+# ⬇️ Logs y depuración
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# ⬇️ Configuración y metadata de editores
+.idea/
+.vscode/
+*.swp
+
+# ⬇️ Caché y resultados de pruebas
+coverage/
+.nyc_output/
+
+# ⬇️ Archivos de lock (si usas Yarn, ignora package-lock.json)
+package-lock.json
+
+# ⬇️ Caché de Vite (si aplicable)
+.vite/
