@@ -1,29 +1,37 @@
 {
-  "name": "ux-soft-monorepo",
+  "name": "@ux-soft/ux-app",
   "version": "1.0.0",
-  "main": "",
-  "repository": "https://github.com/ux-soft/ux-app.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ux-soft/ux-app.git"
+  },
   "author": "Paulo Salazar <paulo.salazar@me.com>",
   "private": true,
   "license": "UNLICENSED",
-  "workspaces": [
-    "packages/ui/*"
-  ],
+  "description": "Monorepo for the foundation packages of ux soft",
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "apps/*"
+    ]
+  },
   "scripts": {
-    "build": "tsc",
-    "build:for": "yarn workspaces foreach -p run build",
-    "build:all": "concurrently \"yarn workspace common build\""
+    "install": "yarn install --immutable",
+    "lint": "yarn workspaces run lint",
+    "build": "yarn workspaces foreach --topological run build",
+    "clean": "rm -rf node_modules && yarn cache clean"
   },
   "devDependencies": {
-    "@types/eslint": "^9.6.1",
     "@types/node": "^22.7.4",
-    "concurrently": "^9.0.1",
     "eslint": "^9.11.1",
+    "prettier": "^3.5.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2",
     "vite": "^5.4.8"
   },
-  "packageManager": "yarn@4.5.0"
+  "packageManager": "yarn@4.5.0",
+  "engines": {
+    "node": ">=18.0.0",
+    "yarn": ">=3.0.0"
+  }
 }
-
-
