@@ -8,13 +8,11 @@
   "author": "Paulo Salazar <paulo.salazar@me.com>",
   "private": true,
   "license": "UNLICENSED",
-  "description": "Monorepo for the foundation packages of ux soft",
-  "workspaces": {
-    "packages": [
-      "packages/*",
-      "apps/*"
-    ]
-  },
+  "description": "Monorepo for the ux-soft core packages",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
   "scripts": {
     "install": "yarn install --immutable",
     "lint": "yarn workspaces run lint",
