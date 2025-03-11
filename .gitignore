@@ -35,3 +35,19 @@ package-lock.json
 
 # ⬇️ Caché de Vite (si aplicable)
 .vite/
+
+# Ignorar archivos de Yarn que no deben versionarse
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# Ignorar archivos de estado y caché de Yarn
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# Ignorar PnP (Plug'n'Play)
+.pnp.*
