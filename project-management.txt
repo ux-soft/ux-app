@@ -3,7 +3,7 @@ TASKS:
 ID      STATUS      DESCRIPTION
 ________________________________________________________________
 01      Done        Config root: tsconfig.json
-02      Pending     Config root: package.json
+02      Done        Config root: package.json
 03      Pending     Config root: vite.config.ts
 04      Done        Config root: .gitignore
 05      Done        Config ui/common/web-components: tsconfig.json
