@@ -51,5 +51,24 @@
 	Brickly – Juguetón pero profesional, basado en bloques reutilizables
     Synap – De “sinapsis”, conexiones rápidas y eficientes
     ModuX – Modularidad + UX
-
+    Neurek – Combinación de “Neuro” y “Tek”, evocando redes neuronales y tecnología.
+    Quanta – Referencia a los cuantos de la mecánica cuántica.
+    Luxon – Partícula hipotética que viaja a la velocidad de la luz.
+    Neutrion – Basado en “neutrino”, una partícula elemental con masa casi nula.
+    Photonix – Inspirado en los fotones, partículas de luz.
+    Axion – Partícula teórica en física que podría explicar la materia oscura.
+    Graviton – Hipotética partícula responsable de la gravedad.
+    Vortex – Inspirado en los vórtices cuánticos y flujos energéticos.
+    Tachyon – Partícula teórica más rápida que la luz.
+    Pulsar – Referencia a las estrellas de neutrones altamente magnetizadas.
+    Quantyx – Cuántica + un toque tecnológico.
+    Axium – Inspirado en Axion y con una sonoridad sólida y premium.
+    Neurox – Referencia a lo neuronal y lo futurista.
+    Photonix – Luz + tecnología en un nombre atractivo.
+    Gravitek – Gravedad + tecnología.
+    TachyX – Basado en “Tachyon” y con un acabado dinámico.
+    Luxora – Luz + un toque elegante y tech.
+    Pulsatrix – Inspirado en los pulsares, suena potente y sofisticado.
+    Vortek – Vortex + tecnología.
+    Quarky – Inspirado en los quarks, pero con un toque amigable.
 
