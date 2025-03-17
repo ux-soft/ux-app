@@ -71,4 +71,20 @@
     Pulsatrix – Inspirado en los pulsares, suena potente y sofisticado.
     Vortek – Vortex + tecnología.
     Quarky – Inspirado en los quarks, pero con un toque amigable.
+    Quantek – “Quantum” + “Tech”, evocando ciencia y tecnología.
+    Quantik – Versión estilizada de “Quantum”, potente y fácil de recordar.
+    Luxiq – “Lux” (luz) + “IQ” (inteligencia), un nombre brillante.
+    Xyron – Futurista, inspirado en ciencia y tecnología.
+    Astrel – De “Astral”, con un sonido limpio y sofisticado.
+    Photora – Basado en “Fotón”, con un sonido elegante.
+    Noviq – “Nova” + “IQ”, evocando inteligencia e innovación
+    Hyperon – Referencia a las partículas subatómicas llamadas “Hiperones”.
+	Xentron (basado en centrón, como en fuerzas centrípetas)
+    Byteon (byte + encender, tecnología en acción)
+    Nebrix (basado en nebulosa, evoca expansión)
+    Modula (Derivado de “modular”, simple y claro)
+    UXion → (UX + Axion, futurista y UX-friendly)
+    Qubitron → (Qubit + tecnología, ideal para un framework moderno)   
+    Photonix.js → (Fotones + tecnología, rápido y moderno)
+
 
