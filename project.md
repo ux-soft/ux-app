@@ -86,5 +86,5 @@
     UXion → (UX + Axion, futurista y UX-friendly)
     Qubitron → (Qubit + tecnología, ideal para un framework moderno)   
     Photonix.js → (Fotones + tecnología, rápido y moderno)
-
-
+    PrimeKit → Todo en uno, como un conjunto de herramientas perfectas.
+    Blockify → Convierte componentes en bloques reutilizables.
